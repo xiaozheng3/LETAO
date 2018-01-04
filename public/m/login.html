@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的乐淘登录页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 1. 引入mui的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2. 引入字体图标的css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入分类的less文件 -->
+    <link rel="stylesheet/less" href="less/login.less">
+    <!-- 4. 引入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 固定在顶部 -->
+    <header id="header">
+        <a href="index.html" class="fa-arrow-left"></a>
+        <h4>我的登录页</h4>
+    </header>
+    <!-- 登录的主体 -->
+    <main id="main">
+        <!-- 登录表单  》 mui组件 》输入表单 -->
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>用户名</label>
+                <input type="text" class="mui-input-clear username" placeholder="请输入用户名" value="itcast">
+            </div>
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input type="password" class="mui-input-password password" placeholder="请输入密码" value="111111">
+            </div>
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-primary btn-login">登录</button>
+                <a href="register.html" type="button" class="mui-btn mui-btn-danger">免费注册</a>
+            </div>
+        </form>
+    </main>
+    <!-- 底部区域 固定在底部 -->
+    <footer id="footer">
+        <!-- mui-row没有左右-15px 的margin所以不需要放到容器 -->
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="fa fa-home active">
+                    首页
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="fa fa-bars">
+                    分类
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="cart.html" class="fa fa-shopping-cart">
+                    购物车
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html" class="fa fa-user">
+                    个人中心
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- 5. 引入zepto的js文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 6. 引入mui的js文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 7. 引入模板引擎的JS文件 -->
+    <script src="lib/artTemplate/template.js"></script>
+    <!-- 8. 引入分类的JS文件 -->
+    <script src="js/login.js"></script>
+    <!-- 公共rem字体设置文件 -->
+    <script src="js/base.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+/* 在主页less文件里面导入base.less公共样式 */
+
+@import 'base.less';
+
+/* 导航区域 */
+
+#nav {
+    padding: 0.3125rem;
+    .mui-row {
+        >div {
+            >a {
+                display: block;
+                >img {
+                    width: 3.125rem;
+                    height: 2.9375rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* 广告区域 */
+
+#adv {
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
+    border-top: 0.03125rem solid #ccc;
+    >.mui-row {
+        .adv-left {
+            >.mui-row {
+                >div {
+                    >a {
+                        display: block;
+                        >img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .adv-right {
+            >a {
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+/* 品牌专区 */
+
+#brand {
+    padding: 0 0.3125rem;
+    .title {
+        display: block;
+        >img {
+            width: 100%;
+        }
+    }
+    .mui-row {
+        >div {
+            >a {
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+/* 运动专区  女士专区 男士专区*/
+
+#sport,
+#women,
+#man {
+    padding: 0 0.3125rem;
+    .title {
+        display: block;
+        >img {
+            width: 100%;
+        }
+    }
+    .mui-row {
+        >div {
+            padding: 0 0.15625rem;
+           
+        }
+    }
+}

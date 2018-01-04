@@ -1,0 +1,96 @@
+@import 'base.less';
+
+/* 商品详情主体 */
+
+#main {
+    .mui-scroll-wrapper {
+        position: relative;
+        height: 100%;
+    }
+    .product-detail {
+        .product-name {
+            padding: 0.3125rem;
+            font-size: 0.5rem;
+            border-bottom: 0.03125rem solid #ccc;
+        }
+        .product-price {
+            padding: 0.3125rem;
+            border-bottom: 0.03125rem solid #ccc;
+            >strong {
+                font-size: 0.625rem;
+                color: #f40;
+            }
+            >del {
+                color: #ccc;
+                font-size: 0.4375rem;
+            }
+        }
+        .product-size {
+            border-bottom: 0.03125rem solid #ccc;
+            padding: 0.3125rem;
+            line-height: 1.25rem;
+            .btn-size {
+                width: 0.9375rem;
+                height: 0.9375rem;
+                line-height: 0.9375rem;
+                text-align: center;
+                border: 0.03125rem solid #ccc;
+                display: inline-block;
+                font-size: 0.4375rem;
+                &.active{
+                    background-color: orange;
+                }
+            }
+        }
+        .product-num {
+            border-bottom: 0.03125rem solid #ccc;
+            padding: 0.3125rem;
+            .product-num-options {
+                font-size: 0px;
+                display: inline-block;
+                .btn-reduce,
+                .btn-add {
+                    width: 0.9375rem;
+                    height: 0.9375rem;
+                    line-height: 0.9375rem;
+                    text-align: center;
+                    border: 0.03125rem solid #ccc;
+                    display: inline-block;
+                    font-size: 0.4375rem;
+                }
+                .count {
+                    width: 0.9375rem;
+                    height: 0.9375rem;
+                    line-height: 0.9375rem;
+                    text-align: center;
+                    border: 0.03125rem solid #ccc;
+                    display: inline-block;
+                    font-size: 0.4375rem;
+                    transform: translateY(-0.03125rem);
+                    /* 注意input是有padding 30px不够用 看到里面内容 */
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* 详情页面单独使用加入购物车和购买的底部 */
+
+#footer {
+    background-color: #ccc;
+    padding: 0.3125rem;
+    .fa-shopping-cart {
+        position: absolute;
+        left: 0.625rem;
+        top: 0.625rem;
+    }
+    .btn-cart {
+        float: right;
+        margin-right: 0.3125rem;
+    }
+    .btn-buy {
+        float: right;
+    }
+}

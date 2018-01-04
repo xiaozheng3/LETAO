@@ -1,0 +1,113 @@
+/* base.less是用来写一些项目都需要的公共样式 */
+
+
+/* 定义乐淘主题色 */
+
+@main-color: #2f4050;
+img {
+    /* 解决图片3px的间隙 */
+    vertical-align: middle;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    /* 去掉小圆点 */
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+
+/* 字体图标的公共样式 */
+
+
+/* 属性选择器 选中类名以fa-开头的类名 和 中间包含空格fa-类名的标签 */
+
+[class^="fa-"],
+[class*=" fa-"] {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+@font-color: #f6f6f6;
+
+/* 公共左侧菜单样式 */
+
+#nav {
+    width: 180px;
+    height: 500px;
+    float: left;
+    background-color: @main-color;
+    .list-group {
+        .list-group-item {
+            background-color: transparent;
+            text-align: center;
+            >img {
+                width: 100px;
+            }
+            >p {
+                color: @font-color;
+                margin-top: 5px;
+            }
+            >a {
+                color: @font-color;
+                text-decoration: none;
+                i {
+                    margin-right: 10px;
+                }
+            }
+            .well {
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+                a {
+                    color: @font-color;
+                    display: block;
+                    line-height: 40px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* 公共的右侧主体 */
+
+#main {
+    overflow: hidden;
+    height: 700px;
+    padding: 50px;
+    .header {
+        >a {
+                font-size: 20px;
+            
+        }
+    }
+    .main-body{
+        padding-top: 50px;
+        padding-bottom: 0px;
+        
+        
+        td,th{
+            text-align: center;
+            img{
+                width: 100px;
+            }
+        }
+    }
+}

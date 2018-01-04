@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 1 . 引入bootstrap的css文件 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 2. 引入字体图标的css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入登录的less文件 -->
+    <link rel="stylesheet/less" href="less/login.less">
+    <!-- 4. 引入less编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+	<!-- 表单 》 全局CSS样式 》 表单 -->
+    <!-- 注意默认form是会提交表单刷新页面 把action设置为# -->
+    <form class="form-horizontal login-form" action="#">
+    	<h4 class="text-center">我的乐淘后台登录</h4>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="username" placeholder="Email" value="root">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-3 control-label">密码</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="password" placeholder="Password" value="123456">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <!-- 或者把按钮改成普通按钮 -->
+                <button type="submit" class="btn btn-default btn-login">登录</button>
+            </div>
+        </div>
+    </form>
+    <!-- 5. 引入jquery -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 6.引入bootstrap的js文件 -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 7. 引入模板引擎的JS文件 -->
+    <script src="lib/artTemplate/template.js"></script>
+    <!-- 8. 引入登录的js文件 -->
+    <script src="js/login.js"></script>
+</body>
+
+</html>

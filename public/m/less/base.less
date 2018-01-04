@@ -1,0 +1,273 @@
+/* base.less是用来写一些项目都需要的公共样式 */
+
+
+/* 定义乐淘主题色 */
+
+@main-color: #006699;
+img {
+    /* 解决图片3px的间隙 */
+    vertical-align: middle;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    /* 去掉小圆点 */
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+
+/* 头部区域的公共样式 */
+
+#header {
+    height: 1.40625rem;
+    background-color: @main-color;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    >h4 {
+        line-height: 1.40625rem;
+        font-weight: normal;
+        margin: 0;
+    }
+    .fa-search {
+        color: #fff;
+        position: absolute;
+        top: 0.4375rem;
+        right: 0.3125rem;
+    }
+    .fa-arrow-left {
+        position: absolute;
+        left: 0.3125rem;
+        top: 0.4375rem;
+        color: #fff;
+    }
+    form {
+        padding-left: 1.09375rem;
+        padding-right: 1.09375rem;
+        >input {
+            width: 100%;
+            background-color: #fff;
+            height: 0.9375rem;
+            margin-top: 0.21875rem;
+            font-size: 0.4375rem;
+            text-align: left;
+            color: #000;
+        }
+    }
+}
+
+
+/* 底部的公共样式 */
+
+#footer {
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    height: 1.5625rem;
+    background-color: @main-color;
+    z-index: 999;
+    .mui-row {
+        >div {
+            >a {
+                color: #fff;
+                font-size: 0.4375rem;
+                display: block;
+                text-align: center;
+                padding: 0.34375rem;
+                &::before {
+                    display: block;
+                }
+                &.active {
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* 主体内容的公共样式 */
+
+#main {
+    padding-top: 1.40625rem;
+    padding-bottom: 1.5625rem;
+    height: 100%;
+    background-color: #fff;
+}
+
+
+/* 字体图标的公共样式 */
+
+
+/* 属性选择器 选中类名以fa-开头的类名 和 中间包含空格fa-类名的标签 */
+
+[class^="fa-"],
+[class*=" fa-"] {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* 搜索表单公共样式 */
+
+.search-form {
+    padding: 0.3125rem;
+    position: relative;
+    padding-right: 2.1875rem;
+    >input {
+        height: 0.9375rem;
+        background-color: #fff;
+        color: #000;
+        border: 0.03125rem solid @main-color;
+        text-align: left;
+        margin-bottom: 0px;
+        border-radius: 0.15625rem 0px 0px 0.15625rem;
+        font-size: 0.4375rem;
+    }
+    >button {
+        position: absolute;
+        right: 0.3125rem;
+        top: 0.3125rem;
+        width: 1.875rem;
+        height: 0.9375rem;
+        background-color: @main-color;
+        border-color: @main-color;
+        border-radius: 0px 0.15625rem 0.15625rem 0px;
+    }
+}
+
+
+/* 商品列表的公共样式 */
+
+.product {
+    box-shadow: 0px 0px 0.15625rem #ccc;
+    text-align: center;
+    padding-bottom: 0.3125rem;
+    margin-top: 0.3125rem;
+    .product-img {
+        display: block;
+        >img {
+            width: 100%;
+        }
+    }
+    .product-name {
+        font-size: 0.4375rem;
+        height: 0.875rem;
+        line-height: 0.4375rem;
+        /* 只显示2行文字超出的隐藏 */
+        overflow: hidden;
+    }
+    .product-price {
+        font-size: 0.375rem;
+        >span {
+            color: #f40;
+        }
+        >del {
+            color: #ccc;
+        }
+    }
+    .product-buy {}
+}
+
+
+/* 加载中的样式 */
+
+.loadEffect {
+    width: 3.125rem;
+    height: 3.125rem;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 3.125rem;
+    bottom: 9.375rem;
+    display: none;
+}
+
+.loadEffect span {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: @main-color;
+    position: absolute;
+    -webkit-animation: load 1.04s ease infinite;
+}
+
+@-webkit-keyframes load {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.loadEffect span:nth-child(1) {
+    left: 0;
+    top: 50%;
+    margin-top: -0.25rem;
+    -webkit-animation-delay: 0.13s;
+}
+
+.loadEffect span:nth-child(2) {
+    left: 0.4375rem;
+    top: 0.4375rem;
+    -webkit-animation-delay: 0.26s;
+}
+
+.loadEffect span:nth-child(3) {
+    left: 50%;
+    top: 0;
+    margin-left: -0.25rem;
+    -webkit-animation-delay: 0.39s;
+}
+
+.loadEffect span:nth-child(4) {
+    top: 0.4375rem;
+    right: 0.4375rem;
+    -webkit-animation-delay: 0.52s;
+}
+
+.loadEffect span:nth-child(5) {
+    right: 0;
+    top: 50%;
+    margin-top: -0.25rem;
+    -webkit-animation-delay: 0.65s;
+}
+
+.loadEffect span:nth-child(6) {
+    right: 0.4375rem;
+    bottom: 0.4375rem;
+    -webkit-animation-delay: 0.78s;
+}
+
+.loadEffect span:nth-child(7) {
+    bottom: 0;
+    left: 50%;
+    margin-left: -0.25rem;
+    -webkit-animation-delay: 0.91s;
+}
+
+.loadEffect span:nth-child(8) {
+    bottom: 0.4375rem;
+    left: 0.4375rem;
+    -webkit-animation-delay: 1.04s;
+}

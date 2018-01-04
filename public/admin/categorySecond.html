@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台主页</title>
+    <!-- 1 . 引入bootstrap的css文件 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 2. 引入字体图标的css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入登录的less文件 -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 4. 引入less编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 左侧导航 -->
+    <aside id="nav">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <img src="images/my_logo.jpg" alt="" class="img-circle">
+                <p>刘德华</p>
+            </li>
+            <li class="list-group-item"><a href="#"><i class="fa-user"></i>用户管理</a></li>
+            <li class="list-group-item">
+                <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa-bars"></i>分类管理</a>
+                <div class="collapse" id="collapseExample">
+                    <div class="well">
+                        <a href="categoryFirst.html">一级分类</a>
+                        <a href="categorySecond.html">二级分类</a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item"><a href="product.html"><i class="fa-product-hunt"></i>商品管理</a></li>
+        </ul>
+    </aside>
+    <!-- 右侧主体 -->
+    <main id="main">
+        <!-- 右侧的头部 -->
+        <header class="header">
+            <a href="#" class="pull-left fa-navicon"></a>
+            <a href="#" class="fa fa-sign-out pull-right">退出</a>
+        </header>
+        <section class="main-body">
+        </section>
+    </main>
+    <!-- 添加二级分类的模态框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加二分类</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <!-- 添加 data-dismiss="modal" 关闭模态框 -->
+                    <button type="button" class="btn btn-primary btn-add" data-dismiss="modal">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 定义二级分类模板 -->
+    <script id="categorySecondTmp" type="text/html">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg btn-add1" data-toggle="modal" data-target="#myModal">
+            添加二级分类
+        </button>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>操作</th>
+                    <th>品牌编号</th>
+                    <th>品牌名称</th>
+                    <th>品牌logo</th>
+                    <th>所属分类</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{each rows as value i}}
+                <tr>
+                    <th scope="row">
+                        <input type="checkbox">
+                    </th>
+                    <td>{{value.id}}</td>
+                    <td>{{value.brandName}}</td>
+                    <td>
+                        <img src="{{value.brandLogo}}" alt="">
+                    </td>
+                    <td>
+                        {{value.categoryName}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+    <!-- 定义添加二级分类模板 -->
+    <script id="addCategorySecondTmp" type="text/html">
+        选择分类：
+        <select id="categoryFirst">
+            {{each rows as value i}}
+            <option value="{{value.id}}">{{value.categoryName}}</option>
+            {{/each}}
+        </select>
+        <br> 品牌名称：
+        <input type="text" class="form-control category-second" placeholder="请输入品牌名称">
+        <br> 品牌图片 ：
+        <input type="file" class="brand-logo">
+    </script>
+    <!-- 5. 引入jquery -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 6.引入bootstrap的js文件 -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 7. 引入模板引擎的JS文件 -->
+    <script src="lib/artTemplate/template.js"></script>
+    <!-- 8. 引入登录的js文件 -->
+    <script src="js/categorySecond.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的购物车页面</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 1. 引入mui的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2. 引入字体图标的css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入分类的less文件 -->
+    <link rel="stylesheet/less" href="less/cart.less">
+    <!-- 4. 引入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 固定在顶部 -->
+    <header id="header">
+        <a href="javascript:history.back();" class="fa-arrow-left"></a>
+        <h4>我的购物车</h4>
+    </header>
+    <!-- 个人中心的主体 -->
+    <main id="main">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-transitioning mui-selected">
+                <!-- 右滑的菜单按钮 -->
+                <div class="mui-slider-right mui-disabled mui-selected">
+                    <a class="mui-btn mui-btn-blue">
+                        编辑
+                    </a>
+                    <a class="mui-btn mui-btn-red">
+                        删除
+                    </a>
+                </div>
+                <!-- 左边显示的内容 -->
+                <div class="mui-slider-handle  mui-navigate-right">
+                    <div class="mui-table-cell">
+                        <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="images/product.jpg">
+                            <div class="mui-media-body">
+                                <div class="product-name">
+                                    【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋
+                                </div>
+                                <div class="product-price">
+                                    <strong>￥112</strong>
+                                    <del>￥888</del>
+                                </div>
+                                <div class="product-num">
+                                    x3双
+                                </div>
+                                <div class="product-size">
+                                    鞋码：40
+                                </div>
+                                <div class="product-check">
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-transitioning mui-selected">
+                <!-- 右滑的菜单按钮 -->
+                <div class="mui-slider-right mui-disabled mui-selected">
+                    <a class="mui-btn mui-btn-blue">
+                        编辑
+                    </a>
+                    <a class="mui-btn mui-btn-red">
+                        删除
+                    </a>
+                </div>
+                <!-- 左边显示的内容 -->
+                <div class="mui-slider-handle  mui-navigate-right">
+                    <div class="mui-table-cell">
+                        <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="images/product.jpg">
+                            <div class="mui-media-body">
+                                <div class="product-name">
+                                    【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋
+                                </div>
+                                <div class="product-price">
+                                    <strong>￥112</strong>
+                                    <del>￥888</del>
+                                </div>
+                                <div class="product-num">
+                                    x3双
+                                </div>
+                                <div class="product-size">
+                                    鞋码：40
+                                </div>
+                                <div class="product-check">
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-transitioning mui-selected">
+                <!-- 右滑的菜单按钮 -->
+                <div class="mui-slider-right mui-disabled mui-selected">
+                    <a class="mui-btn mui-btn-blue">
+                        编辑
+                    </a>
+                    <a class="mui-btn mui-btn-red">
+                        删除
+                    </a>
+                </div>
+                <!-- 左边显示的内容 -->
+                <div class="mui-slider-handle  mui-navigate-right">
+                    <div class="mui-table-cell">
+                        <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="images/product.jpg">
+                            <div class="mui-media-body">
+                                <div class="product-name">
+                                    【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋
+                                </div>
+                                <div class="product-price">
+                                    <strong>￥112</strong>
+                                    <del>￥888</del>
+                                </div>
+                                <div class="product-num">
+                                    x3双
+                                </div>
+                                <div class="product-size">
+                                    鞋码：40
+                                </div>
+                                <div class="product-check">
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <!-- 订单 -->
+    <div id="order">
+        <!-- 订单总额 -->
+        <div class="order-count">
+            订单总额：￥<span class="order-price">88888</span>
+        </div>
+        <button class="mui-btn mui-btn-danger">生成订单</button>
+    </div>
+    <!-- 底部区域 固定在底部 -->
+    <footer id="footer">
+        <!-- mui-row没有左右-15px 的margin所以不需要放到容器 -->
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="fa fa-home active">
+                    首页
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="fa fa-bars">
+                    分类
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="cart.html" class="fa fa-shopping-cart">
+                    购物车
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html" class="fa fa-user">
+                    个人中心
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script id="cartTmp" type="text/html">
+        {{each rows as value i}}
+        <li class="mui-table-view-cell mui-transitioning mui-selected">
+            <!-- 右滑的菜单按钮 -->
+            <div class="mui-slider-right mui-disabled mui-selected">
+                <a class="mui-btn mui-btn-blue btn-edit" data-product-size={{value.productSize}} data-now-size={{value.size}} data-now-num="{{value.num}}" data-product-num="{{value.productNum}}" data-id="{{value.id}}">
+                        编辑
+                    </a>
+                <a class="mui-btn mui-btn-red btn-delete" data-id="{{value.id}}">
+                        删除
+                    </a>
+            </div>
+            <!-- 左边显示的内容 -->
+            <div class="mui-slider-handle  mui-navigate-right">
+                <div class="mui-table-cell">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="{{value.pic[0].picAddr}}">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                {{value.proName}}
+                            </div>
+                            <div class="product-price">
+                                <strong class="price" data-price="{{value.price}}">￥{{value.price}}</strong>
+                                <del>￥{{value.oldPrice}}</del>
+                            </div>
+                            <div class="product-num">
+                                x <span class="num" data-num="{{value.num}}">{{value.num}}</span> 双
+                            </div>
+                            <div class="product-size">
+                                鞋码：{{value.size}}
+                            </div>
+                            <div class="product-check">
+                                <input type="checkbox" checked="true">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script id="editCartTmp" type="text/html">
+         <div class="product-size">
+            尺码： {{each productSize as value i}}
+                {{if nowSize == value}}
+                <span class="btn-size active" >{{value}}</span>                 
+                {{else}}
+                <span class="btn-size" >{{value}}</span> 
+                {{/if}}
+            {{/each}}
+        </div>
+        <div class="product-num">
+            数量：
+            <div class="product-num-options">
+                <a href="#" class="btn-reduce">-</a>
+                <input type="number" class="count" value="{{nowNum}}" disabled="true">
+                <a href="#" class="btn-add">+</a>
+            </div>
+            剩余： <span class="residue-num">{{productNum}}</span>件
+        </div>
+    </script>
+    <!-- 5. 引入zepto的js文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 6. 引入mui的js文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 7. 引入模板引擎的JS文件 -->
+    <script src="lib/artTemplate/template.js"></script>
+    <!-- 8. 引入分类的JS文件 -->
+    <script src="js/cart.js"></script>
+        <!-- 公共rem字体设置文件 -->
+   <script src="js/base.js"></script>
+</body>
+
+</html>

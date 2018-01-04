@@ -1,0 +1,37 @@
+@import 'base.less';
+
+/* 搜索主体 */
+
+#main {   
+    .search-history {
+        padding: 0.3125rem;
+        .search-history-heading {
+            >span {
+                font-size: 0.4375rem;
+                &:first-child {
+                    float: left;
+                }
+                &:last-child{
+                    float: right;
+                }
+            }
+        }
+        .search-history-list{
+            margin-top: 0.3125rem;
+                >ul{
+                    border-left: 0.03125rem solid #ccc;
+                    border-right: 0.03125rem solid #ccc;
+                    >li{
+
+                        >a{
+                            display: block;
+                            font-size: 0.4375rem;
+                            >i{
+                                float: right;
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}

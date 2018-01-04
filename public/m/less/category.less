@@ -1,0 +1,98 @@
+/* 1. 在分类的less里面导入base.less */
+
+@import 'base.less';
+
+/* 分类的主体 */
+
+#main {
+    /* 左侧分类菜单 */
+    background-color: #eee;
+    .category-left {
+        float: left;
+        >ul {
+            >li {
+                >a {
+                    width: 2.5rem;
+                    height: 1.25rem;
+                    display: block;
+                    border-right: 0.03125rem solid #ccc;
+                    border-bottom: 0.03125rem solid #ccc;
+                    line-height: 1.25rem;
+                    text-align: center;
+                    font-size: 0.4375rem;
+                }
+                &.active {
+                    >a {
+                        background-color: #ccc;
+                        color: @main-color;
+                    }
+                }
+            }
+        }
+    }
+    /* 右侧分类的商品 解决方案1 */
+    .category-right {
+        overflow: hidden;
+        padding: 0.3125rem;
+        position: relative;
+        .mui-scroll-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            .mui-scroll {
+                //子元素在mui里面也加了绝对定位 （但是子元素的不需要脱标 设置为相对定位）
+                position: relative;
+                min-height: 100%;
+                width: 100%;
+                .mui-row {
+                    background-color: #fff;
+                    >div {
+                        >a {
+                            display: block;
+                            text-align: center;
+                            >img {
+                                width: 100%;
+                            }
+                            >p {
+                                font-size: 0.375rem;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* .category-right {
+        overflow: hidden;
+        padding: 0.3125rem;
+        height: 100%;
+        给右侧分类加一个相对定位 让里面的区域滚动的父容器相对右边来定位
+        position: relative;
+        .mui-scroll-wrapper {
+            left: 0.3125rem;
+            top: 0.3125rem;
+            right: 0.3125rem;
+            width: auto;
+            .mui-scroll {
+                .mui-row {
+                    background-color: #fff;
+                    >div {
+                        >a {
+                            display: block;
+                            text-align: center;
+                            >img {
+                                width: 100%;
+                            }
+                            >p {
+                                font-size: 0.375rem;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } */
+}
